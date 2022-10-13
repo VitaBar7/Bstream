@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Dark--blue);
+    
+}
+
+:root {
+    
+    --Red: hsl(0, 97%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Dark--blue: hsl(223, 30%, 9%);
+    --Greyish-blue: hsl(223, 23%, 46%);
+    --Semi-dark-blue: hsl(223, 36%, 14%);
+    --Light-grey: rgb(187, 187, 187);
+    --font-family: 'Outfit', sans-serif;
+    --font-weight-light : 100;
+    --font-weight-medium : 300;
+    --font-weight-large : 500;
+}
+
+/* Flexbox setting */
+.flex { display: flex; }
+.flex-wrap {flex-wrap: wrap;}
+.flex-justify-center { justify-content: center; }
+.flex-align-center { align-items: center; }
+.flex-justify-between { justify-content: space-between; }
+.flex-justify-evenly { justify-content: space-evenly; }
+.flex-justify-around { justify-content: space-around; }
+.flex-justify-end { justify-content: flex-end; }
+.flex-start { justify-content: flex-start; }
+
+/* le smart */
+
+/* cards */
+.section-cards{
+    width: 375px;
+    background-color: var(--Dark--blue);
+    color: var(--White);
+    font-family: var(--font-family); 
+}
+
+.card{
+    width: 164px;
+    height: 154px;
+    margin-bottom: 0.5em;
+
+}
+
+.picture{
+    width: 100%;
+    height: 70%;
+    border-radius: 8px;
+}
+
+.Movie:before{
+    content:url("/assets/icon-category-movie.svg") ;
+    padding-right: 5px;
+}
+
+.TV:before{
+    content:url("/assets/icon-category-tv.svg") ;
+    padding-right: 5px;
+
+}
+
+.info{
+    font-size: 11px;
+    margin-bottom: 0.25em;
+    display: flex;
+}
+
+h2{
+    z-index: 1;
+    margin-left: 20px;
+}
+
+.info p{
+    margin-right: 0px;
+    color: var(--Light-grey);
+    padding-right: 5px;
+}
+
+h4 .title {
+    font-weight: var(--font-weight-light);
+    
+}
+.rec{
+    margin-bottom: 0.5em;
+}
+
+/* tablette */
+
+/*Media queries */
+@media (min-width: 769px) {
+
+.searchbar{
+    height: 150px; 
+}
+
+.section-cards{ 
+    width: 620px;
+    background-color: var(--Dark--blue);
+    color: var(--White);
+    font-family: var(--font-family); 
+    display: flex;   
+    flex-direction: column;
+    
+}
+
+.card{
+    width: 28%;
+    height: 170px;
+    margin-bottom: 1em;
+    padding-bottom: 1.5em;
+}
+
+.picture{
+    width: 100%;
+    height: 80%;
+    border-radius: 8px;
+}
+
+.Movie:before{
+    content:url("/assets/icon-category-movie.svg") ;
+    padding-right: 5px;
+}
+
+.TV:before{
+    content:url("/assets/icon-category-tv.svg") ;
+    padding-right: 5px;
+
+}
+.info{
+    margin-bottom: 0.5em;
+    font-weight: 100;
+    display: flex;
+
+}
+
+.info p{
+    margin-right: 5px;
+}
+
+h2{
+    z-index: 1;
+    margin-left: 20px;
+}
+
+.title { font-size: 1em; }
+.rec{
+    margin-bottom: 1.5em;
+}
+    
+
+} 
+
+/* desktop */
+/*Media queries */
+@media (min-width: 1240px) {
+    .container{
+        flex-direction: row;
+    }
+    h2{
+        font-size: large;
+    }
+    nav{
+        width: 20%;
+        border: skyblue;
+        border: solid;
+        height: 960px;
+    }
+
+    main{
+        width: 80%;
+    }
+    
+    /* cards */
+    .section-cards{ 
+       
+        width: 100%;
+        background-color: var(--Dark--blue);
+        color: var(--White);
+        font-family: var(--font-family); 
+        display: flex;   
+        flex-direction: column;
+        /* align-items: center; */
+    
+    
+    }
+    .card{
+        
+        width: 22%;
+        height: 226px;
+        margin-bottom: 0.5em;
+        /* padding-bottom: 1.5em; */
+    }
+    
+    .picture{
+        width: 100%;
+        height: 80%;
+        border-radius: 8px;
+    }
+    
+    .Movie:before{
+        content:url("/assets/icon-category-movie.svg") ;
+        padding-right: 5px;
+    }
+    
+    .TV:before{
+        content:url("/assets/icon-category-tv.svg") ;
+        padding-right: 5px;
+    
+    }
+    .info{
+        margin-bottom: 0.5em;
+        font-weight: 100;
+    
+    }
+    
+    .info p{
+        margin-right: 5px;
+    }
+    
+    .title { font-size: 1em; }
+    .rec{
+        margin-bottom: 1.5em;
+    }
+        
+    
+    } 
