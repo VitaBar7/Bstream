@@ -7,7 +7,8 @@
         "large": "./assets/thumbnails/beyond-earth/trending/large.jpg"
       },
       "regular": {
-        "small": "../assets/thumbnails/beyond-earth/regular/small.jpg",
+
+        "small": "./assets/thumbnails/beyond-earth/regular/small.jpg",
         "medium": "./assets/thumbnails/beyond-earth/regular/medium.jpg",
         "large": "./assets/thumbnails/beyond-earth/regular/large.jpg"
       }
@@ -26,7 +27,8 @@
         "large": "./assets/thumbnails/bottom-gear/trending/large.jpg"
       },
       "regular": {
-        "small": "../assets/thumbnails/bottom-gear/regular/small.jpg",
+
+        "small": "./assets/thumbnails/bottom-gear/regular/small.jpg",
         "medium": "./assets/thumbnails/bottom-gear/regular/medium.jpg",
         "large": "./assets/thumbnails/bottom-gear/regular/large.jpg"
       }

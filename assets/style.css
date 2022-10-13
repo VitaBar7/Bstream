@@ -1,9 +1,12 @@
+
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     font-family: 'Outfit', sans-serif;
     background-color: var(--Dark--blue);
+    font-weight: 100;
+    color: var(--White)
     
 }
 
@@ -19,6 +22,7 @@
     --font-weight-light : 100;
     --font-weight-medium : 300;
     --font-weight-large : 500;
+
 }
 
 /* Flexbox setting */
@@ -73,8 +77,10 @@
 }
 
 h2{
-    z-index: 1;
     margin-left: 20px;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: -0.5px;
 }
 
 .info p{
@@ -145,8 +151,10 @@ h4 .title {
 }
 
 h2{
-    z-index: 1;
     margin-left: 20px;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.5px;
 }
 
 .title { font-size: 1em; }
@@ -163,16 +171,15 @@ h2{
     .container{
         flex-direction: row;
     }
+    
     h2{
-        font-size: large;
-    }
-    nav{
-        width: 20%;
-        border: skyblue;
-        border: solid;
-        height: 960px;
-    }
+    margin-left: 20px;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.5px;
 
+    }
+  
     main{
         width: 80%;
     }
@@ -231,3 +238,173 @@ h2{
         
     
     } 
+
+.container {
+    flex-direction: column;
+}
+
+nav {
+    position: absolute;
+    flex-direction: row;
+    width: 100vw;
+    height: 56px;
+    top: 0px;
+    background-color: var(--Semi-dark-blue);
+}
+
+nav ul {
+    list-style-type: none;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+ul li a {
+    padding-right: 24px;
+}
+
+li a svg {
+    color: var(--Greyish-blue-);
+    stroke: var(--Greyish-blue-);
+}
+
+li a .active {
+    color: var(--White);
+    stroke: var(--White)
+}
+
+li a svg:hover {
+    color: var(--Red);
+    stroke: var(--Red);
+}
+
+.logo svg {
+    margin-left: 16px;
+    border-bottom-left-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+    border-top-left-radius: 2.5;
+    border-top-right-radius: 0;
+}
+
+.logo-size svg {
+    width: 25px;
+    height: 20px;
+}
+
+nav img {
+    box-sizing: border-box;
+    height: 24px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+
+main {
+    margin-top: 100px;
+}
+
+@media (min-width: 768px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        box-sizing: border-box;
+        width: 719px;
+        height: 72px;
+        border-radius: 10px;
+        margin-top: 23px;
+        margin-left: 24px;
+    } 
+
+    ul li a {
+        padding-right: 32px;
+    }
+
+    .logo svg {
+        margin-left: 24px;
+    }
+
+    .logo-size svg {
+        width: 32px;
+        height: 25.6px;
+    }
+
+    nav img {
+        height: 32px;
+        margin-right: 20px;
+    }
+
+    main {
+        margin-top: 100px;
+    }
+
+}
+
+
+@media (min-width: 1240px) {
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flex-justify-between { justify-content: start; }
+
+    nav#float-left {
+        box-sizing: border-box;
+        flex-direction: column;
+        width:96px;
+        height: 960px;
+        border-radius: 10px;
+        margin: 32px;
+        float: left;
+        padding: 32px;
+        
+    }
+
+    nav ul {
+        display:flex;
+        flex-direction: column;
+        padding-top: 65px;
+    }
+
+    nav ul li {
+        padding-bottom: 45px;
+    }
+
+    ul li a {
+        padding-right: 55px;
+        padding-bottom: 32px;
+        margin-bottom: 100px;
+    }
+
+    .logo svg {
+        margin-left: 0px;
+    }
+
+    .logo-size {
+        width: 32px;
+        height: 25.6px;
+
+    }
+
+    nav img {
+        
+        height: 40px;
+        margin-left:-20px;
+        position:absolute;
+        bottom: 32px;
+    }
+
+    main {
+        margin-left: 150px;
+    }
+}
+
+
+   
+
+
