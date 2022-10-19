@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
-  
 </head>
 <body>
   <container class="container flex">
@@ -27,19 +26,31 @@
     </nav>
     <main>
       <section class="searchbar">
-        <h3>Search for movies</h3>
-
+        <div class="search-wrapper flex">
+          <label for="search"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"><path d="M27.613 25.72 23.08 21.2a10.56 10.56 0 0 0 2.253-6.533C25.333 8.776 20.558 4 14.667 4S4 8.776 4 14.667c0 5.89 4.776 10.666 10.667 10.666A10.56 10.56 0 0 0 21.2 23.08l4.52 4.533a1.333 1.333 0 0 0 1.893 0 1.333 1.333 0 0 0 0-1.893ZM6.667 14.667a8 8 0 1 1 16 0 8 8 0 0 1-16 0Z" fill="#FFF"/></svg></label>
+          <input type="search" id="search" onclick="hideCards()" placeholder="Search for movies or tv series" data-search>
+        </div>
+        <div class="movie-cards flex flex-wrap flex-wrap flex-justify-around" data-movie-cards-container></div>
+        <template class="" data-movie-template>
+          <div class="card">
+              <img class="image" data-image src="">
+              <div class="info flex">
+                <p class="year" data-year></p>
+                <p class="category" data-category></p>
+                <p class="rating" data-rating></p>
+              </div>
+              <h3 class="title" data-title></h3>
+            </div>
+        </template>
       </section>
-
-      <section class="cards">
-        <h2>Movies</h2>
-
+    
+      <section id="hide-cards" class="section-cards">
+        <h2 class="rec">Movies</h2>
+        <div id="cards" class="flex flex-wrap flex-justify-evenly"></div>
+          <div class="info flex flex-justify-evenly "></div>
       </section>
-
-      
     </main>
   </container>
-
-  
+<script type="text/javascript" src="assets/movies.js"></script>
 </body>
 </html>

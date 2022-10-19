@@ -26,19 +26,40 @@
       <a href="login.html"><img src="assets\image-avatar.png" alt="profile photo"></a>
   
     </nav>
-    <main>
-      <h3>Search for bookmarked shows</h3>
-        
-      <h2>Bookmarked Movies</h2>
-      
-       
-      
-      <h2>Bookmarked TV Series</h2>
-      
-
-        
-    </main>
-  </container>
-
+  <main>
+    <section class="searchbar">
+      <div class="search-wrapper flex">
+        <label for="search"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"><path d="M27.613 25.72 23.08 21.2a10.56 10.56 0 0 0 2.253-6.533C25.333 8.776 20.558 4 14.667 4S4 8.776 4 14.667c0 5.89 4.776 10.666 10.667 10.666A10.56 10.56 0 0 0 21.2 23.08l4.52 4.533a1.333 1.333 0 0 0 1.893 0 1.333 1.333 0 0 0 0-1.893ZM6.667 14.667a8 8 0 1 1 16 0 8 8 0 0 1-16 0Z" fill="#FFF"/></svg></label>
+        <input type="search" id="search" onclick="hideCards()" placeholder="Search for bookmarked shows" data-search>
+      </div>
+      <div class="movie-cards flex flex-wrap flex-wrap flex-justify-around" data-movie-cards-container></div>
+      <template class="" data-movie-template>
+        <div class="card">
+            <img class="image" data-image src="">
+            <div class="info flex">
+              <p class="year" data-year></p>
+              <p class="category" data-category></p>
+              <p class="rating" data-rating></p>
+            </div>
+            <h3 class="title" data-title></h3>
+          </div>
+      </template>
+    </section>
+    <section id="hide-cards">
+      <div id="hide-cards" class="section-cards">
+        <h2 class="rec">Bookmarked Movies</h2>
+        <div id="cards" class="flex flex-wrap flex-justify-evenly"></div>
+          <div class="info flex flex-justify-evenly "></div>
+      </div>
+      <div id="hide-cards" class="section-cards">
+        <h2 class="rec">Bookmarked TV Series</h2>
+        <div id="cards" class="flex flex-wrap flex-justify-evenly"></div>
+          <div class="info flex flex-justify-evenly "></div>
+      </div>
+    </section>
+    
+  </main>
+</container>
+<script type="text/javascript" src="assets/bookmarked.js"></script>
 </body>
 </html>
