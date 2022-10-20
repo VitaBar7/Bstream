@@ -31,7 +31,7 @@ fetch("../data.json")
 
 
 
-  //search bar
+  //👇search bar
 
 const movieCardTemplate = document.querySelector("[data-movie-template]")
 const movieCardContainer = document.querySelector("[data-movie-cards-container]")
@@ -60,11 +60,17 @@ searchInput.addEventListener("input", e => {
           const image = card.querySelector("[data-image]")
           const title = card.querySelector("[data-title]")
           const year = card.querySelector("[data-year]")
+          const icon = card.querySelector("[data-icon]")
           const category = card.querySelector("[data-category")
           const rating = card.querySelector("[data-rating]")
-          image.src = movie.thumbnail.regular.small
+          image.src = movie.thumbnail.regular.large
           title.textContent = movie.title
           year.textContent = movie.year
+          if(movie.category == "Movie") {
+            icon.src = "assets/icon-category-movie.svg"
+          } else {
+            icon.src = "assets/icon-category-tv.svg"
+          }
           category.textContent = movie.category
           rating.textContent = movie.rating
           movieCardContainer.append(card)
